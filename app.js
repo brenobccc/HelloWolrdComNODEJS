@@ -3,8 +3,14 @@ const http = require('http');
 const PORT = 3000;
 
 const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' });
-    res.end('Olá Mundo!\n');
+    variavel = req.url
+
+    if(variavel == '/soma'){
+        console.log("rota 1")
+    }else if(variavel == '/resultado'){
+        console.log("rota 2")
+    }
+
 });
 
 server.listen(PORT, () => {
