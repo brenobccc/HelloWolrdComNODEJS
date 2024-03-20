@@ -3,13 +3,18 @@ const http = require('http');
 const PORT = 3000;
 
 const server = http.createServer((req, res) => {
-    variavel = req.url
-
-    if(variavel == '/soma'){
-        console.log("rota 1")
-    }else if(variavel == '/resultado'){
-        console.log("rota 2")
+    url = req.url
+    //soma, subtração, divisão, multiplicação
+    if(url == '/soma'){
+        variavel1 = 50
+        variavel2 = 40
+        console.log('A soma dos dois valores é: ',(variavel1+variavel2))
     }
+
+    if(url == '/subtracao'){
+      
+    }
+    
 
 });
 
